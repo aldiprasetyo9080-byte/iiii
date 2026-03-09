@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOKEP 18+</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #E0F2FE; padding: 20px; text-align: center; }
+        
+        /* Grid 3 Kolom (akan jadi 2 baris jika ada 6 item) */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 Kolom */
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .video-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .title {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .video-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+
+        .thumbnail { width: 100%; height: 150px; object-fit: cover; display: block; }
+
+        .video-info { padding: 15px; font-weight: bold; font-size: 14px; background: #4169E1; }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>KEDEWASAAN ROLE VVIP</h2>
+    <p>klik daftar dibawah ini untuk membuka semua video</p>
+
+    <div class="video-grid">
+        <div class="video-card" onclick="sendTelegram('Matematika: Aljabar')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/tvgfcwdrsmzv696haija6/indo.jpg?rlkey=tavx82m41scujcouqg5b97vwr" class="thumbnail">
+            <div class="video-info">Kumpulan Indo Viral (500 VIDEO)</div>
+        </div>
+        <div class="video-card" onclick="sendTelegram('Biologi: Sel Hewan')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/k8a11cpco8jyc0q3d0ivs/jepang.jpg?rlkey=3t549sikhvhcd7ulhqcc8tpl8" class="thumbnail">
+            <div class="video-info">Kumpulan Jepang (300 VIDEO)</div>
+        </div>
+        <div class="video-card" onclick="sendTelegram('Fisika: Gravitasi')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/9uq1mpzodtth10fqw8v29/malaysia.jpg?rlkey=kb6wtyu8shzq1ji58mwh7hgly" class="thumbnail">
+            <div class="video-info">Kumpulan Malaysia (150 VID)</div>
+        </div>
+        <div class="video-card" onclick="sendTelegram('Sejarah: Proklamasi')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/qhsun7p8r8c7kx0k2974m/anak.jpg?rlkey=bxbmhlsn14pfqjjbfsfvzj8tx" class="thumbnail">
+            <div class="video-info">Kumpulan Anak Kecil All Negara</div>
+        </div>
+        <div class="video-card" onclick="sendTelegram('Kimia: Tabel Periodik')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/dss160vv7bx0a7ngjkbmt/vietnam.jpg?rlkey=f3xl5q8dsjwkx4e099bjfjcls" class="thumbnail">
+            <div class="video-info">Kumpulan Selebgram Malay + Indo</div>
+        </div>
+        <div class="video-card" onclick="sendTelegram('B. Inggris: Tenses')">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/w4davodwuon5kl524nh8n/vcs.jpg?rlkey=0gsbcf9wk4hvfx3ehyf7hlq2l" class="thumbnail">
+            <div class="video-info">Kumpulan VCS Malay + Indo</div>
+        </div>
+    </div>
+
+    <script>
+        function sendTelegram(videoTitle) {
+            const token = "8748681448:AAF4p8RrtL3ilwCXMP9a7xraHCryZVhS62o"; // Ganti dengan token botmu
+            const chat_id = "7321369294"; // Ganti dengan chat ID-mu
+            const message = "ADA SESEORANG YANG INGIN DI TENDANG;
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
+
+            fetch(url)
+                .then(response => {
+                    if(response.ok) {
+                        alert("Laporan terkirim ke Telegram untuk: " + videoTitle);
+                    } else {
+                        alert("Gagal mengirim laporan. Periksa Token/Chat ID.");
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</body>
+</html>
